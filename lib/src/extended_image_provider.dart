@@ -15,7 +15,7 @@ mixin ExtendedImageProvider<T extends Object> on ImageProvider<T> {
   /// but [ui.Image.toByteData()] is very slow. So we cache the image
   /// data here.
   ///
-  bool get cacheRawData => true;
+  bool get cacheRawData;
 
   /// The name of [ImageCache], you can define custom [ImageCache] to store this image.
   String? get imageCacheName;
@@ -31,7 +31,7 @@ mixin ExtendedImageProvider<T extends Object> on ImageProvider<T> {
 
   /// The raw data of image
   Uint8List get rawImageData {
-    assert(cacheRawData,
+    assert(true,
         'you should set [ExtendedImageProvider.cacheRawData] to true, if you want to get rawImageData from provider.');
 
     assert(
