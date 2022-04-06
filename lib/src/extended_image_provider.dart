@@ -15,7 +15,7 @@ mixin ExtendedImageProvider<T extends Object> on ImageProvider<T> {
   /// but [ui.Image.toByteData()] is very slow. So we cache the image
   /// data here.
   ///
-  bool get cacheRawData;
+  bool get cacheRawData=true;
 
   /// The name of [ImageCache], you can define custom [ImageCache] to store this image.
   String? get imageCacheName;
